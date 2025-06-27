@@ -1,0 +1,155 @@
+/* ---------- Base ---------- */
+:root {
+  --clr-dark: #0d1613;
+  --clr-light: #fafaf9;
+  --clr-accent: #47ab5d;
+  --clr-accent-2: #e7f6eb;
+  --ff-head: 'Playfair Display', serif;
+  --ff-body: 'Work Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--ff-body);
+  color: var(--clr-dark);
+  background: var(--clr-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+img { width: 100%; display: block; border-radius: 0.75rem; }
+
+/* ---------- Utilities ---------- */
+.container { width: min(90%, 1100px); margin-inline: auto; }
+.section-title { font-family: var(--ff-head); font-size: 2.4rem; text-align: center; margin-bottom: 2rem; }
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 50rem;
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: scale(1.05); }
+.btn-dark { background: var(--clr-dark); }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(13, 22, 19, 0.25), rgba(13, 22, 19, 0.85)),
+    url('https://source.unsplash.com/1920x1080/?garden,restaurant') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--clr-light);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  font-family: var(--ff-head);
+}
+.logo { font-size: 1.8rem; letter-spacing: 1px; }
+.logo span { color: var(--clr-accent); }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+.nav a { color: var(--clr-light); text-decoration: none; position: relative; }
+.nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: var(--clr-accent);
+  position: absolute;
+  left: 0; bottom: -4px;
+  transition: width 0.3s;
+}
+.nav a:hover::after { width: 100%; }
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 12vh;
+  padding-inline: 5%;
+}
+.hero-content h2 {
+  font-family: var(--ff-head);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.15;
+}
+.hero-content p { margin: 1rem 0 2rem; font-size: 1.1rem; }
+
+/* ---------- About ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-block: 5rem;
+}
+.about-text h2 { font-family: var(--ff-head); font-size: 2rem; margin-bottom: 1rem; }
+.about-text p { font-size: 1.05rem; }
+
+/* ---------- Menu ---------- */
+.menu { background: var(--clr-accent-2); padding-block: 5rem; }
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: var(--clr-light);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.card h3 { font-family: var(--ff-head); font-size: 1.3rem; }
+.price {
+  align-self: flex-end;
+  font-weight: 600;
+  color: var(--clr-accent);
+}
+
+/* ---------- Gallery ---------- */
+.gallery { padding-block: 5rem; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding-inline: 5%;
+}
+
+/* ---------- Visit ---------- */
+.visit {
+  text-align: center;
+  padding-block: 5rem 6rem;
+}
+.visit h2 { font-family: var(--ff-head); font-size: 2rem; margin-bottom: 0.5rem; }
+.visit p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+  padding: 1.2rem 5%;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 850px) {
+  .about { grid-template-columns: 1fr; }
+  .nav-links { gap: 1rem; }
+}

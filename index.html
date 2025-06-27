@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenBite Bistro</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== Hero ========== -->
+  <header class="hero">
+    <nav class="nav">
+      <h1 class="logo">Garden<span>Bite</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h2>Farm-fresh flavours, every bite.</h2>
+      <p>Seasonal cuisine • Botanical ambience • Sustainable soul</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </header>
+
+  <!-- ========== About ========== -->
+  <section id="about" class="about container">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>Hidden in the heart of the city, GardenBite Bistro brings the greenhouse to your plate.  
+        Every dish is crafted from produce grown within a 50-km radius, harvested at dawn and served by dusk.</p>
+    </div>
+    <figure class="about-img">
+      <img src="https://source.unsplash.com/600x500/?greenhouse,restaurant" alt="Greenhouse dining">
+    </figure>
+  </section>
+
+  <!-- ========== Menu ========== -->
+  <section id="menu" class="menu">
+    <h2 class="section-title">Seasonal Tasting Menu</h2>
+    <div class="menu-grid container">
+      <article class="card">
+        <h3>Blossom Salad</h3>
+        <p>Edible flowers • Citrus vinaigrette</p>
+        <span class="price">₹450</span>
+      </article>
+      <article class="card">
+        <h3>Earth-Fire Soup</h3>
+        <p>Roasted root vegetables • Smoked paprika</p>
+        <span class="price">₹380</span>
+      </article>
+      <article class="card">
+        <h3>Garden Gnocchi</h3>
+        <p>Spinach dough • Sage butter • Pea shoots</p>
+        <span class="price">₹620</span>
+      </article>
+      <article class="card">
+        <h3>Citrus Orchard Tart</h3>
+        <p>Yuzu curd • Candied orange peel</p>
+        <span class="price">₹350</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== Gallery ========== -->
+  <section id="gallery" class="gallery">
+    <h2 class="section-title">Atmosphere</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x400/?restaurant,plants" alt="">
+      <img src="https://source.unsplash.com/400x400/?chef,plating"   alt="">
+      <img src="https://source.unsplash.com/400x400/?farm,produce"   alt="">
+      <img src="https://source.unsplash.com/400x400/?candlelight"    alt="">
+    </div>
+  </section>
+
+  <!-- ========== Visit ========== -->
+  <section id="visit" class="visit container">
+    <h2>Visit Us</h2>
+    <p>17 Orchid Lane, Coimbatore — Open Tue-Sun · 12 PM-11 PM</p>
+    <a href="tel:+91-98765-43210" class="btn btn-dark">Reserve Now</a>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> GardenBite Bistro • Crafted with local love.</p>
+  </footer>
+
+  <!-- Year auto-update (tiny inline JS to keep HTML+CSS focus) -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
